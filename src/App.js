@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import Gameboard from "./components/Gameboard";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        <img
+          src="/images/Pokemon_logo.png"
+          alt="Pokemon!"
+          className="pokemon-logo"
+        ></img>
+      </h1>
+      <h3>
+        Get points by clicking on an image, but don't click on any more than
+        once!
+      </h3>
+
+      <Gameboard />
     </div>
   );
 }
