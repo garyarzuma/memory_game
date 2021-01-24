@@ -22,6 +22,7 @@ const Gameboard = (props) => {
     let randNum = getRandomInt(pokemonMax);
     for (let i = 0; i < 6; i++) {
       while (array.indexOf(randNum) !== -1) {
+        //checks to see if the number is already in the array to prevent duplicates
         randNum = getRandomInt(pokemonMax);
       }
       array.push(randNum);
@@ -40,12 +41,14 @@ const Gameboard = (props) => {
 
   function updateScore(id) {
     if (arrayHasDuplicates(id) === true) {
+      //lose game
       if (topScore < currentScore) {
         setTopScore(currentScore);
       }
       setCurrentScore(0);
       setPokemonClickedArray([]);
     } else {
+      //keep playing
       setCurrentScore(currentScore + 1);
       updatePokemonClickedArray(id);
     }

@@ -9,17 +9,16 @@ const apiHandler = (() => {
       const pokemonJSON = await response.json();
       if (response.status !== 404) {
         const pokemonObject = {
-          name: pokemonJSON.name.toUpperCase(), //uses lodash upperFirst method to capitilize first character of name
+          name: pokemonJSON.name.toUpperCase(),
           id: pokemonJSON.id,
-          types: _.upperFirst(pokemonJSON.types[0].type.name),
+          types: _.upperFirst(pokemonJSON.types[0].type.name), //uses lodash upperFirst method to capitilize first character of name
           img: pokemonJSON.sprites.other["official-artwork"].front_default,
         };
-        return pokemonObject;
+        return pokemonObject; //returns a promise
       }
       throw new Error("Pokemon not found!");
     } catch (error) {
       console.log(error);
-      //displayToDom.handleError();
     }
   }
   return { getPokemon };
