@@ -1,10 +1,24 @@
 import React, { useState } from "react";
-import apiHandler from "./apiHandler";
+import PokemonCard from "./PokemonCard";
 
-const WorkExp = (props) => {
-  apiHandler.getPokemon(56).then((x) => console.log(x));
-  apiHandler.getPokemon(98).then((x) => console.log(x));
-  return <div className="gameboard"></div>;
+const Gameboard = (props) => {
+  const [pokemonId, setPokemonId] = useState(1);
+  //apiHandler.getPokemon(56).then((x) => console.log(x));
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  return (
+    <div className="gameboard">
+      <PokemonCard id={pokemonId + getRandomInt(900)} />
+      <PokemonCard id={pokemonId + getRandomInt(900)} />
+      <PokemonCard id={pokemonId + getRandomInt(900)} />
+      <PokemonCard id={pokemonId + getRandomInt(900)} />
+      <PokemonCard id={pokemonId + getRandomInt(900)} />
+      <PokemonCard id={pokemonId + getRandomInt(900)} />
+    </div>
+  );
 };
 
-export default WorkExp;
+export default Gameboard;

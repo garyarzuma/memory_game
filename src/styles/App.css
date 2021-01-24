@@ -6,3 +6,8 @@
   max-width: 20%;
   height: auto;
 }
+
+.gameboard {
+  display: flex;
+  flex-wrap: wrap;
+}
