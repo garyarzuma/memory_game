@@ -14,9 +14,13 @@ const PokemanCard = (props) => {
     return (
       <div className="pokemon-card" onClick={props.onClick} id={props.id}>
         <img className="pokemon-image" src={pokemonObject.img} alt={props.id} />
-        <div className="pokemon-name">{pokemonObject.name}</div>
-        <div className="pokemon-id">#{pokemonObject.id}</div>
-        <div className="pokemon-type">{pokemonObject.types}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-name">{pokemonObject.name}</div>
+          <div className="pokemon-id">#{pokemonObject.id}</div>
+        </div>
+        <div className="pokemon-type" id={pokemonObject.types}>
+          {pokemonObject.types}
+        </div>
       </div>
     );
   }

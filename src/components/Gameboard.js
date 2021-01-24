@@ -10,11 +10,7 @@ const Gameboard = (props) => {
 
   useEffect(() => {
     //random array of 8 integers between 1 and 1+pokemonMax
-    setPokemonIdArray(
-      Array(8)
-        .fill()
-        .map(() => Math.round(Math.random() * pokemonMax + 1))
-    );
+    updateCards();
   }, []);
 
   function getRandomInt() {
@@ -22,7 +18,15 @@ const Gameboard = (props) => {
   }
 
   function updateCards() {
-    setPokemonIdArray(pokemonIdArray.map((x) => getRandomInt(30)));
+    let array = [];
+    let randNum = getRandomInt(pokemonMax);
+    for (let i = 0; i < 6; i++) {
+      while (array.indexOf(randNum) !== -1) {
+        randNum = getRandomInt(pokemonMax);
+      }
+      array.push(randNum);
+    }
+    setPokemonIdArray(array);
   }
 
   function handleClick(event) {
@@ -44,7 +48,6 @@ const Gameboard = (props) => {
     } else {
       setCurrentScore(currentScore + 1);
       updatePokemonClickedArray(id);
-      console.log(pokemonClickedArray);
     }
   }
 
@@ -55,7 +58,8 @@ const Gameboard = (props) => {
   return (
     <div className="gameboard-score-container">
       <div className="score">
-        Current Score: {currentScore} Top Score: {topScore}
+        <span className="current-score">Current Score: {currentScore}</span>
+        <span className="top-score">Top Score: {topScore}</span>
       </div>
       <div className="gameboard">
         {pokemonIdArray.map((num) => {

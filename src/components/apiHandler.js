@@ -9,7 +9,7 @@ const apiHandler = (() => {
       const pokemonJSON = await response.json();
       if (response.status !== 404) {
         const pokemonObject = {
-          name: _.upperFirst(pokemonJSON.name), //uses lodash upperFirst method to capitilize first character of name
+          name: pokemonJSON.name.toUpperCase(), //uses lodash upperFirst method to capitilize first character of name
           id: pokemonJSON.id,
           types: _.upperFirst(pokemonJSON.types[0].type.name),
           img: pokemonJSON.sprites.other["official-artwork"].front_default,
