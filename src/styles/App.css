@@ -10,4 +10,18 @@
 .gameboard {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pokemon-image {
+  width: 250px;
+  height: auto;
+}
+
+.pokemon-card {
+  box-shadow: 8px 5px 8px rgb(129, 129, 129);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 10px;
+  border: 2px black solid;
 }
