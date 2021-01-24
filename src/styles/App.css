@@ -24,4 +24,10 @@
   margin: 15px;
   padding: 10px;
   border: 2px black solid;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pokemon-card:hover {
+  transform: translate(0, -15px);
 }

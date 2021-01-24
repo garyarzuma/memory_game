@@ -6,8 +6,7 @@ const Gameboard = (props) => {
   const [currentScore, setCurrentScore] = useState(0);
   const [topScore, setTopScore] = useState(0);
   const [pokemonClickedArray, setPokemonClickedArray] = useState([]);
-  const pokemonMax = 50;
-  //apiHandler.getPokemon(56).then((x) => console.log(x));
+  const pokemonMax = 149;
 
   useEffect(() => {
     //random array of 8 integers between 1 and 1+pokemonMax
@@ -23,7 +22,6 @@ const Gameboard = (props) => {
   }
 
   function updateCards() {
-    //console.log()
     setPokemonIdArray(pokemonIdArray.map((x) => getRandomInt(30)));
   }
 
