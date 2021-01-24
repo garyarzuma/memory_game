@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles/App.css"],"names":[],"mappings":"AAAA,KACE,iBACF,CAEA,cACE,aAAc,CACd,WACF,CAEA,WACE,YAAa,CACb,cACF","file":"main.47998806.chunk.css","sourcesContent":[".App {\n  text-align: center;\n}\n\n.pokemon-logo {\n  max-width: 20%;\n  height: auto;\n}\n\n.gameboard {\n  display: flex;\n  flex-wrap: wrap;\n}\n"]}
