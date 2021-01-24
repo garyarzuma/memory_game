@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <h1>
         <img
-          src="/images/Pokemon_logo.png"
+          src="https://github.com/garyarzuma/memory_game/blob/main/public/images/Pokemon_logo.png"
           alt="Pokemon!"
           className="pokemon-logo"
         ></img>
