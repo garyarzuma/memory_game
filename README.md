@@ -19,7 +19,7 @@ Future Ways to Improve:
     -Add a way for users to select the pokemon of a generation and have the card deck use those pokemon only.
 
 Overall project time: ~15 hours
-Date Completed: 1/24/2020
+Date Completed: 1/24/2021
 
 -Gary Arzumanyan
 
